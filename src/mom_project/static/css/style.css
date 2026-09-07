@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    display: flex;
+    border: 2px solid red;
+    height: 8vh;
+    position: sticky;
+    background-color: gray;
+    padding: 10px 10px;
+    gap: 10px;
+}
+
+.main_page {
+    display: inline-flex;
+    margin-left: 15%;
+    align-items: center;
+}
+
+.main_page a{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+}
+
+.site_navigation {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.site_navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.site_navigation a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.site_navigation a:hover {
+    color: yellow;
+}
+
+.site_tools {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site_tools a {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+}
+
+.site_tools img {
+    height: 70%;
+}
+
+.slider_container {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    height: 600px;
+    object-fit: cover;
+}
+
+.slider_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.slider_btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.category_container {
+    display: flex;
+    height: 500px;
+    border: 2px solid red;
+    margin: 0 1vw;
+    gap: 5%;
+}
+
+.category_container a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 30%;
+    height: 100%;
+}
+
+.category {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.category_img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;  
+    flex-shrink: 0;
+    transition: transform 1s ease, filter 1s ease;
+}
+
+.under_img {
+    flex: 1;               
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: grey;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.category:hover .category_img{
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}

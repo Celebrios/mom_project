@@ -7,6 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header class="head">
+        <div class="main_page"><a href="/" class="main_page">Снежно</a></div>
+        <nav class="site_navigation">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/catalog">Каталог</a></li>
+                <li><a href="/about">Инфо</a></li>
+                <li><a href="/contacts">Контакты</a></li>
+            </ul>
+            <a href="tel:+79137272525" class="phone-link">+7-913-727-25-25</a>
+        </nav>
+        <div class="site_tools">
+            <a><img src="/static/images/search.png"></a>
+            <a href="/favorites" title="избранное"><img src="/static/images/favorites.png"></a> 
+            <a href="/cart" title="корзина"><img src="/static/images/cart.png"></a>  
+        </div>
+    </header>
+    <div class="slider_container">
+        <div class="slider" id="slider">
+            <img src="/static/images/slide1.jpg" class="slide">
+            <img src="/static/images/slide2.png" class="slide">
+            <img src="/static/images/slide3.png" class="slide">
+        </div>
+        <button class="slider_btn prev" onclick="prev_slide()">❮</button>
+        <button class="slider_btn next" onclick="next_slide()">❯</button>
+    </div>
+    <div class="category_container">
+        <a href="/catalog/cap">
+            <div class="category">
+                <img src="/static/images/slide1.jpg" class="category_img">
+                <div class="under_img">шапки</div>
+            </div>
+        </a>
+        <a href="/catalog/jacket">
+            <div class="category">
+                <img src="/static/images/slide2.png" class="category_img">
+                <div class="under_img">куртки</div>
+            </div>
+        </a>
+        <a href="/catalog/socks">
+            <div class="category">
+                <img src="/static/images/slide3.png" class="category_img">
+                <div class="under_img">носки</div>
+            </div>
+        </a>
+    </div>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>

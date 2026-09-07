@@ -5,11 +5,12 @@ from pathlib import Path
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="src/mom_project/static"), name="static")
+static_dir = Path(__file__).parent / "static" 
+app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
 
 @app.get('/', response_class=HTMLResponse)
 def home():
-    html_path = Path("src/mom_project/static/index.html")
+    html_path = static_dir / 'html' / 'index.html'
     return HTMLResponse(html_path.read_text(encoding='utf-8'))
 
 
