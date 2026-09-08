@@ -85,7 +85,7 @@
 .slide {
     width: 100%;
     flex-shrink: 0;
-    height: 600px;
+    height: 40vw;
     object-fit: cover;
 }
 
@@ -113,9 +113,9 @@
 
 .category_container {
     display: flex;
-    height: 500px;
+    height: 30vw;
     border: 2px solid red;
-    margin: 0 1vw;
+    margin: 0 1vw 1vw;
     gap: 5%;
 }
 
@@ -155,4 +155,59 @@
 .category:hover .category_img{
     transform: scale(1.1);
     filter: brightness(0.7);
+}
+
+.about_container {
+    display: flex;
+    height: 30vw;
+    border: 2px solid red;
+    margin: 0 1vw 1vw;
+    justify-content: space-between;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+}
+
+.about_img {
+    width: 35%;
+}
+
+.catalog_btn {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    height: 3em;
+    width: 30%;
+    background-color: grey;
+    font-size: 1.5vw;
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.2s ease;
+}
+
+.catalog_btn:hover {
+    filter: brightness(1.6);
+    animation: shake 0.7s ease-in;
+}
+
+.text {
+    font-size: 1.5vw;
+}
+
+.about_brand {
+    font-size: 3.5vw;
+    text-align: center;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
 }
